@@ -1,5 +1,7 @@
+// IMPORTS
 import chalk from 'chalk';
 
+// CUSTOM LOGGER
 const logger = (message: string, level: string): void => {
   if (level === 'INFO') return console.log(chalk.blueBright(message));
 

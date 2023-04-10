@@ -3,6 +3,9 @@ import * as dotenv from 'dotenv';
 import express, { Request, Response } from 'express';
 import cors from 'cors';
 
+// ROUTERS
+import googleTasksRouter from './routes/Google/Tasks.routes';
+
 // HELPERS
 import errorHandler from './middleware/error-handler.middleware';
 
@@ -23,6 +26,7 @@ server.use('/api/healthcheck', (req: Request, res: Response) => {
 });
 
 // ROUTES
+server.use('/api/google', googleTasksRouter);
 
 // ERROR HANDLING
 server.use(errorHandler);
